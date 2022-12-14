@@ -58,6 +58,7 @@ open class MainWindow : JFrame() {
             add(checkbox)
             add(createCtrlZButton())
             add(createAboutButton())
+            add(createSaveButtonImage())
         }
 
         jMenuBar = menuBar
@@ -318,7 +319,7 @@ open class MainWindow : JFrame() {
 
     }
 
-    private fun createSaveButtonImage(plane: Plane): JButton{
+    private fun createSaveButtonImage(): JButton{
         val btnSave = JButton("Save")
         btnSave.addActionListener{
             val img = BufferedImage(mainPanel.width,mainPanel.height+infoHeight,BufferedImage.TYPE_INT_RGB)
